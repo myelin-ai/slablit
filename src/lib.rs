@@ -11,7 +11,7 @@ macro count_tts {
 }
 
 pub macro slab {
-    ($( $x:expr ),*) => {{
+    ($( $x:expr ),* $(,)?) => {{
         let mut temp_slab = slab::Slab::with_capacity(crate::count_tts!($($x)*));
 
         $(

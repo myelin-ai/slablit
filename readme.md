@@ -1,7 +1,13 @@
 # slablit
 
+> ⚠️ This crate requires the nightly compiler
+
 Literals for slab creation
 
 ```rust
-let slab: Slab<usize> = slab![10, 20, 30];
+#![feature(decl_macro, macro_at_most_once_rep)]
+
+use slablit::slab;
+
+let (slab, [first, second, third]) = slab![10, 20, 30];
 ```

@@ -10,10 +10,9 @@
 //!
 //! ```
 //! #![feature(decl_macro, macro_at_most_once_rep)]
-//!
 //! use slablit::slab;
 //!
-//! let (slab, [first, second, third]) = slab!["foo", "bar", "baz"];
+//! let (slab, [first_id, second_id, third_id]) = slab!["foo", "bar", "baz"];
 //! ```
 //!
 //! ## With Trailing comma

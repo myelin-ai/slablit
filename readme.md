@@ -2,7 +2,7 @@
 
 > ⚠️ This crate requires the nightly compiler
 
-Literals for slab creation
+Literal for slab creation
 
 ```rust
 #![feature(decl_macro, macro_at_most_once_rep)]

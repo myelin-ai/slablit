@@ -8,6 +8,12 @@
 
 Literal for slab creation
 
+```
+# Cargo.toml
+[dependencies]
+slablit = "0.2.0"
+```
+
 ```rust
 #![feature(decl_macro, macro_at_most_once_rep)]
 

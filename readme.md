@@ -1,5 +1,7 @@
 # slablit
 
+[![Build Status](https://travis-ci.com/myelin-ai/slablit.svg?branch=master)](https://travis-ci.com/myelin-ai/slablit)
+
 > ⚠️ This crate requires the nightly compiler
 
 Literal for slab creation

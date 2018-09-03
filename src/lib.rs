@@ -15,7 +15,7 @@
 //! let (slab, [first_id, second_id, third_id]) = slab!["foo", "bar", "baz"];
 //! ```
 //!
-//! ## With Trailing comma
+//! ## With Trailing Comma
 //!
 //! ```
 //! #![feature(decl_macro, macro_at_most_once_rep)]

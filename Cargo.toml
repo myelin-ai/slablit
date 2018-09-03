@@ -4,7 +4,10 @@ cargo-features = ["edition"]
 name = "slablit"
 description = "Literal for slab creation"
 version = "0.2.0"
-authors = ["Ruben Schmidmeister <ruben@myelin.ch>"]
+authors = [
+    "Ruben Schmidmeister <ruben@myelin.ch>",
+    "Jeremy Stucki <jeremy@myelin.ch>",
+]
 license = "MIT/Apache-2.0"
 readme = "readme.md"
 repository = "https://github.com/myelin-ai/slablit"

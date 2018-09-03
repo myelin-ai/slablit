@@ -8,7 +8,7 @@
 
 Literal for slab creation
 
-```
+```toml
 # Cargo.toml
 [dependencies]
 slablit = "0.2.0"

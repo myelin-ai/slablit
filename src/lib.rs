@@ -59,7 +59,7 @@ mod test {
     use super::slab;
 
     #[test]
-    fn test_slab_macro() {
+    fn slab_macro() {
         let (slab, [first, second, third]) = slab![10, 20, 30];
 
         assert_eq!(Some(&10), slab.get(first));
@@ -68,7 +68,7 @@ mod test {
     }
 
     #[test]
-    fn test_slab_macro_with_trailing_comma() {
+    fn slab_macro_with_trailing_comma() {
         let (slab, [first, second, third]) = slab![10, 20, 30,];
 
         assert_eq!(Some(&10), slab.get(first));

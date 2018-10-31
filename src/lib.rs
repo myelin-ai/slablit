@@ -59,7 +59,7 @@ mod test {
     use super::slab;
 
     #[test]
-    fn macro_can_create_empty_slab() {
+    fn slab_macro_can_create_empty_slab() {
         let (slab, []): (slab::Slab<i32>, [usize; 0]) = slab![];
         assert!(slab.is_empty());
     }

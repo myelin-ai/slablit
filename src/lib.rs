@@ -1,5 +1,3 @@
-#![feature(decl_macro, macro_at_most_once_rep)]
-
 //!
 //! This crate exposes a macro `slab` which creates a new [`Slab`].  
 //! It returns a tuple of the slab and the created keys as a fixed size array.
@@ -9,7 +7,6 @@
 //! ## Basic
 //!
 //! ```
-//! #![feature(decl_macro, macro_at_most_once_rep)]
 //! use slablit::slab;
 //!
 //! let (slab, [first_id, second_id, third_id]) = slab!["foo", "bar", "baz"];
@@ -18,8 +15,6 @@
 //! ## With Trailing Comma
 //!
 //! ```
-//! #![feature(decl_macro, macro_at_most_once_rep)]
-//!
 //! use slablit::slab;
 //!
 //! let (slab, _) = slab![
@@ -33,21 +28,25 @@
 //! [`Slab`]: https://docs.rs/slab/latest/slab/struct.Slab.html
 //!
 
-#[allow(unused_macros)]
+#[macro_export]
 #[doc(hidden)]
-macro replace_expr($_t:tt $sub:expr) {
-    $sub
+macro_rules! __internal_replace_expr {
+    ($_t:tt $sub:expr) => {
+        $sub
+    };
 }
 
-#[allow(unused_macros)]
+#[macro_export]
 #[doc(hidden)]
-macro count_tts {
-    ($($tts:tt)*) => {<[()]>::len(&[$(crate::replace_expr!($tts ())),*])};
+macro_rules! __internal_count_tts {
+    ($($tts:tt)*) => {<[()]>::len(&[$($crate::__internal_replace_expr!($tts ())),*])};
 }
 
-pub macro slab {
+#[macro_export]
+macro_rules! slab {
     ($( $x:expr ),* $(,)?) => {{
-        let mut temp_slab = slab::Slab::with_capacity(crate::count_tts!($($x)*));
+        #[allow(unused_mut)]
+        let mut temp_slab = slab::Slab::with_capacity($crate::__internal_count_tts!($($x)*));
         let keys = [$(temp_slab.insert($x), )*];
 
         (temp_slab, keys)

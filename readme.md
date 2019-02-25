@@ -6,11 +6,15 @@
 
 Literal for slab creation
 
+## Usage
+
+Add this to your `Cargo.toml`:
 ```toml
-# Cargo.toml
 [dependencies]
-slablit = "0.2.1"
+slablit = "0.3"
 ```
+
+## Example
 
 ```rust
 use slablit::slab;

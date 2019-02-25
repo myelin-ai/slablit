@@ -9,7 +9,7 @@ Literal for slab creation
 ```toml
 # Cargo.toml
 [dependencies]
-slablit = "0.2.1"
+slablit = "0.3"
 ```
 
 ```rust

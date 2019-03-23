@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/myelin-ai/slablit.svg?branch=master)](https://travis-ci.com/myelin-ai/slablit)
 [![Latest Version](https://img.shields.io/crates/v/slablit.svg)](https://crates.io/crates/slablit)
 [![Documentation](https://docs.rs/slablit/badge.svg)](https://docs.rs/slablit)
+[![dependency status](https://deps.rs/repo/github/myelin-ai/slablit/status.svg)](https://deps.rs/repo/github/myelin-ai/slablit)
 
 Literal for slab creation
 

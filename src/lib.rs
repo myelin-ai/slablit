@@ -1,4 +1,3 @@
-//!
 //! This crate exposes a macro `slab` which creates a new [`Slab`].  
 //! It returns a tuple of the slab and the created keys as a fixed size array.
 //!
@@ -52,6 +51,10 @@ macro_rules! slab {
         (temp_slab, keys)
     }};
 }
+
+#[cfg(doctest)]
+#[doc = include_str!("../readme.md")]
+pub mod doctest_readme {}
 
 #[cfg(test)]
 mod test {

@@ -3,7 +3,7 @@ name = "slablit"
 description = "Literal for slab creation"
 version = "0.3.0"
 authors = [
-    "Ruben Schmidmeister <ruben@myelin.ch>",
+    "Tau <git@tau.garden>",
     "Jeremy Stucki <jeremy@myelin.ch>",
 ]
 license = "MIT/Apache-2.0"

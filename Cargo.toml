@@ -11,7 +11,7 @@ readme = "readme.md"
 repository = "https://github.com/myelin-ai/slablit"
 homepage = "https://github.com/myelin-ai/slablit"
 documentation = "https://docs.rs/slablit"
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 slab = "0.4"

@@ -44,9 +44,10 @@ macro_rules! __internal_count_tts {
 #[macro_export]
 macro_rules! slab {
     ($( $x:expr ),* $(,)?) => {{
+        const COUNT: usize = $crate::__internal_count_tts!($($x)*);
         #[allow(unused_mut)]
-        let mut temp_slab = slab::Slab::with_capacity($crate::__internal_count_tts!($($x)*));
-        let keys = [$(temp_slab.insert($x), )*];
+        let mut temp_slab = slab::Slab::with_capacity(COUNT);
+        let keys: [usize; COUNT] = [$(temp_slab.insert($x), )*];
 
         (temp_slab, keys)
     }};
@@ -62,7 +63,7 @@ mod test {
 
     #[test]
     fn slab_macro_can_create_empty_slab() {
-        let (slab, []): (slab::Slab<i32>, [usize; 0]) = slab![];
+        let (slab, []): (slab::Slab<i32>, _) = slab![];
         assert!(slab.is_empty());
     }
 

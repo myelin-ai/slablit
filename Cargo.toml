@@ -12,6 +12,7 @@ repository = "https://github.com/myelin-ai/slablit"
 homepage = "https://github.com/myelin-ai/slablit"
 documentation = "https://docs.rs/slablit"
 edition = "2021"
+exclude = [".github", ".mailmap", ".gitignore"]
 
 [badges.maintenance]
 status = "passively-maintained"

@@ -9,7 +9,6 @@ authors = [
 license = "MIT/Apache-2.0"
 readme = "readme.md"
 repository = "https://github.com/myelin-ai/slablit"
-homepage = "https://github.com/myelin-ai/slablit"
 documentation = "https://docs.rs/slablit"
 edition = "2021"
 exclude = [".github", ".mailmap", ".gitignore"]

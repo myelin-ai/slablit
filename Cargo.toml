@@ -12,6 +12,8 @@ repository = "https://github.com/myelin-ai/slablit"
 documentation = "https://docs.rs/slablit"
 edition = "2021"
 exclude = [".github", ".mailmap", ".gitignore"]
+categories = ["data-structures"]
+keywords = ["literal", "slab", "macro"]
 
 [badges.maintenance]
 status = "passively-maintained"
